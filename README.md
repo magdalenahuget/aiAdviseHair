@@ -49,6 +49,10 @@ To use the API, follow these steps:
 
 Explore and interact with the API using the Swagger documentation available at Swagger UI.
 
+## Release notes
+
+No release currently available
+
 ## Note
 
 This is the backend and API version for now. Future versions may include a frontend for a more user-friendly experience.
