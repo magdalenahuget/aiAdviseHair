@@ -1,8 +1,15 @@
 package com.aihairadvise.dto.request;
 
+import lombok.*;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@ToString
+@Getter
+@Setter
 public class AdviceResponseDto {
 
-    private Long id;
     private String faceShape;
     private String foreheadHeight;
     private String noseSize;

@@ -1,7 +1,14 @@
 package com.aihairadvise.dto.request;
 
 import com.aihairadvise.model.Advice;
+import lombok.*;
 
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@ToString
+@Getter
+@Setter
 public class AdviceRequestDto {
 
     private Advice.FaceShape faceShape;
@@ -11,5 +18,4 @@ public class AdviceRequestDto {
     private Advice.EyeColor eyeColor;
     private Advice.Gender gender;
 
-    // Constructors, getters, and setters
 }
