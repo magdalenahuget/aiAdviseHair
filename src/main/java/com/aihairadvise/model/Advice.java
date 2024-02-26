@@ -42,5 +42,28 @@ public class Advice {
     @Column(name = "gender")
     private Gender gender;
 
+    // Enums for subcharacteristics
+    public enum FaceShape {
+        SQUARE, ROUND
+    }
 
+    public enum ForeheadHeight {
+        HIGH, LOW, MEDIUM
+    }
+
+    public enum NoseSize {
+        LARGE, SMALL, MEDIUM
+    }
+
+    public enum LipFullness {
+        FULL, NOT_FULL
+    }
+
+    public enum EyeColor {
+        BLUE, BROWN, GREEN, BLACK
+    }
+
+    public enum Gender {
+        FEMALE, MALE
+    }
 }
