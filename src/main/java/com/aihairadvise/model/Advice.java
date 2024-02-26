@@ -42,6 +42,9 @@ public class Advice {
     @Column(name = "gender")
     private Gender gender;
 
+    @Column(name = "recommendation")
+    private String recommendation;
+
     // Enums for subcharacteristics
     public enum FaceShape {
         SQUARE, ROUND
