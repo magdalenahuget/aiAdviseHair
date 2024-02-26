@@ -2,6 +2,8 @@ package com.aihairadvise.dto.request;
 
 import lombok.*;
 
+import java.util.Date;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -10,11 +12,6 @@ import lombok.*;
 @Setter
 public class AdviceResponseDto {
 
-    private String faceShape;
-    private String foreheadHeight;
-    private String noseSize;
-    private String lipFullness;
-    private String eyeColor;
-    private String gender;
-
+    private String recommendation;
+    private Date timestamp;
 }
