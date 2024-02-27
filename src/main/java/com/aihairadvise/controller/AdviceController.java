@@ -39,4 +39,30 @@ public class AdviceController {
             return ResponseEntity.notFound().build();
         }
     }
+
+//
+//    private final AdviceService adviceService;
+//
+//    public AdviceController(AdviceService adviceService) {
+//        this.adviceService = adviceService;
+//    }
+//
+//    @PostMapping("/search")
+//    public ResponseEntity<?> getAdviceByAttributes(@RequestBody AdviceRequestDto requestDTO) {
+//        if (requestDTO.getFaceShape() == null ||
+//                requestDTO.getForeheadHeight() == null ||
+//                requestDTO.getNoseSize() == null ||
+//                requestDTO.getLipFullness() == null ||
+//                requestDTO.getEyeColor() == null ||
+//                requestDTO.getGender() == null) {
+//            return ResponseEntity.badRequest().body("Missing one or more required fields");
+//        }
+//
+//        try {
+//            AdviceResponseDto advice = adviceService.getAdviceByAttributes(requestDTO);
+//            return ResponseEntity.ok(advice);
+//        } catch (AdviceNotFoundException ex) {
+//            return ResponseEntity.notFound().build();
+//        }
+//    }
 }
