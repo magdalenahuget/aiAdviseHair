@@ -22,6 +22,14 @@ public class AdviceController {
 
     @PostMapping("/search")
     public ResponseEntity<?> getAdviceByAttributes(@RequestBody AdviceRequestDto requestDTO) {
+        if (requestDTO.getFaceShape() == null ||
+                requestDTO.getForeheadHeight() == null ||
+                requestDTO.getNoseSize() == null ||
+                requestDTO.getLipFullness() == null ||
+                requestDTO.getEyeColor() == null ||
+                requestDTO.getGender() == null) {
+            return ResponseEntity.badRequest().body("Missing one or more required fields");
+        }
 
         try {
             AdviceResponseDto advice = adviceService.getAdviceByAttributes(requestDTO);
