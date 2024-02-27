@@ -3,6 +3,8 @@ package com.aihairadvise.validator;
 import com.aihairadvise.dto.request.AdviceRequestDto;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
+import org.springframework.validation.ValidationUtils;
+import org.springframework.validation.Validator;
 
 @Component
 public class AdviceRequestValidator implements Validator {
