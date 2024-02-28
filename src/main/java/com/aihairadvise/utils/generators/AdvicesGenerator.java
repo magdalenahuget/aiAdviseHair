@@ -26,10 +26,7 @@ public class AdvicesGenerator {
                                 advice.setLipFullness(lipFullness);
                                 advice.setEyeColor(eyeColor);
                                 advice.setGender(gender);
-                                // Tutaj możesz ustawić pole recommendation na dowolną wartość lub pominąć ten krok
-                                advice.setRecommendation("Twoja rekomendacja");
-
-                                // Wyświetlanie stworzonego obiektu
+                                advice.setRecommendation("Example recommendation");
                                 System.out.println(counter + ". " + advice.toString());
                             }
                         }
