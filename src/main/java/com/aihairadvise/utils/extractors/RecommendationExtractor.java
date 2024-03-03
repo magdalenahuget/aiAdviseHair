@@ -1,49 +1,49 @@
 package com.aihairadvise.utils.extractors;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import com.sun.tools.javac.Main;
+
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class RecommendationExtractor {
+
     public static void main(String[] args) {
         try {
-            String[] descriptions = extractDescriptions("src/main/resources/aiAnswersSecondPart.txt");
+            String[] descriptions = extractAndSplitDescriptions("src/main/resources/aiAnswersSecondPart.txt");
+//            printArray(descriptions);
             System.out.println(Arrays.toString(descriptions));
-        } catch (IOException e) {
+            System.out.println(">>>>>>>>>>>>>>");
+            System.out.println(descriptions[2]);
+            System.out.println(">>>>>>>>>>>>>>");
+
+
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public static String[] extractDescriptions(String filename) throws IOException {
-        ArrayList<String> descriptionsList = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
+    public static String[] extractAndSplitDescriptions(String filePath) throws Exception {
+        StringBuilder fileContent = new StringBuilder();
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
-            StringBuilder description = new StringBuilder();
             while ((line = br.readLine()) != null) {
-                if (line.startsWith("Give your most")) {
-                    if (description.length() > 0) {
-                        descriptionsList.add(description.toString());
-                        description = new StringBuilder();
-                    }
-                    description.append(line);
-                } else {
-                    description.append(line);
-                }
-            }
-            // Add the last description
-            if (description.length() > 0) {
-                descriptionsList.add(description.toString());
+                fileContent.append(line).append("\n");
             }
         }
-        return descriptionsList.toArray(new String[0]);
+
+        String[] descriptions = fileContent.toString().split("Give your most");
+        // Remove the empty first element if present
+        if (descriptions.length > 0 && descriptions[0].isEmpty()) {
+            descriptions = Arrays.copyOfRange(descriptions, 1, descriptions.length);
+        }
+        return descriptions;
     }
 
     public static void printArray(String[] arr) {
         for (String s : arr) {
-            System.out.println(s);
-            System.out.println();
+            System.out.println("Give your most" + s);
+            System.out.println("=============");
         }
     }
 }
