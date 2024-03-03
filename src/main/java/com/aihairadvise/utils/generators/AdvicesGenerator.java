@@ -19,14 +19,7 @@ public class AdvicesGenerator {
                         for (Advice.EyeColor eyeColor : eyeColors) {
                             for (Advice.Gender gender : genders) {
                                 counter++;
-                                Advice advice = new Advice();
-                                advice.setFaceShape(faceShape);
-                                advice.setForeheadHeight(foreheadHeight);
-                                advice.setNoseSize(noseSize);
-                                advice.setLipFullness(lipFullness);
-                                advice.setEyeColor(eyeColor);
-                                advice.setGender(gender);
-                                advice.setRecommendation("Example recommendation");
+                                Advice advice = createAdviceBy(faceShape, foreheadHeight, noseSize, lipFullness, eyeColor, gender);
                                 displayHairSpecificPrompt(counter, advice);
                             }
                         }
@@ -34,6 +27,18 @@ public class AdvicesGenerator {
                 }
             }
         }
+    }
+
+    private static Advice createAdviceBy(Advice.FaceShape faceShape, Advice.ForeheadHeight foreheadHeight, Advice.NoseSize noseSize, Advice.LipFullness lipFullness, Advice.EyeColor eyeColor, Advice.Gender gender) {
+        Advice advice = new Advice();
+        advice.setFaceShape(faceShape);
+        advice.setForeheadHeight(foreheadHeight);
+        advice.setNoseSize(noseSize);
+        advice.setLipFullness(lipFullness);
+        advice.setEyeColor(eyeColor);
+        advice.setGender(gender);
+        advice.setRecommendation("Example recommendation");
+        return advice;
     }
 
     private static void displayHairSpecificPrompt(int counter, Advice advice) {
