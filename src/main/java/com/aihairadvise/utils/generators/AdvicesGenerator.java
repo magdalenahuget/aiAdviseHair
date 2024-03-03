@@ -36,7 +36,7 @@ public class AdvicesGenerator {
                                         + advice.getLipFullness() + " lipfullness, "
                                         + advice.getEyeColor() + " eye color, "
                                         + advice.getGender() + " gender."
-                                        + " The description should be in 10 sentences and maximum of 150 words without mentioning consulting with a specialist. Make sure to have at least summarizing 2 sentences ");
+                                        + " The description should be in 10 sentences and maximum of 150 words without mentioning consulting with a specialist.Make sure to have at least summarizing 2 sentences. The last part of your answer should be an summarization and start that with word \"Overall\". Do not use break line between 'overall' section and description.");
                             }
                         }
                     }
