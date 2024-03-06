@@ -58,3 +58,8 @@ No release currently available
 This is the backend and API version for now. Future versions may include a frontend for a more user-friendly experience.
 
 Feel free to reach out if you have any questions or feedback. Happy hairstyling!
+
+
+## Todo:
+
+- Frontend
