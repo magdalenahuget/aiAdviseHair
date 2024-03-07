@@ -72,3 +72,10 @@ Features still needed to be done:
 
 4. **Backend**: Deploy backend to Azure Cloud.
    
+5. **Frontend**: Create simple frontend.
+
+4. **Ai**: Generate hairstyle image based on recommendation.
+
+4. **Backend**: Add image to Advice Model.
+
+4. **Database**: Add images to database.
