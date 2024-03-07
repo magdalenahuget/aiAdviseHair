@@ -1,9 +1,6 @@
 package com.aihairadvise.utils.extractors;
 
-import com.sun.tools.javac.Main;
-
 import java.io.*;
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class RecommendationExtractor {
@@ -11,12 +8,10 @@ public class RecommendationExtractor {
     public static void main(String[] args) {
         try {
             String[] descriptions = extractAndSplitDescriptions("src/main/resources/aiAnswersSecondPart.txt");
-//            printArray(descriptions);
-            System.out.println(Arrays.toString(descriptions));
-            System.out.println(">>>>>>>>>>>>>>");
-            System.out.println(descriptions[2]);
-            System.out.println(">>>>>>>>>>>>>>");
 
+            for (String description : descriptions) {
+                String textAfterChatGPT = extractTextAfterChatGPT(description);
+            }
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -40,10 +35,21 @@ public class RecommendationExtractor {
         return descriptions;
     }
 
-    public static void printArray(String[] arr) {
-        for (String s : arr) {
-            System.out.println("Give your most" + s);
-            System.out.println("=============");
+
+    public static String extractTextAfterChatGPT(String recommendation) {
+        String[] recommendationSplit = recommendation.split("ChatGPT");
+        if (recommendationSplit.length > 1) {
+            // REMEMBER! First number is not printed. It starts with 180, but it isn't displayed.
+
+            String recommendationExtracted = recommendationSplit[1];
+            // TODO: remember to check/fix last and first one
+            recommendationExtracted = recommendationExtracted.substring(0, recommendationExtracted.length() - 5).trim();
+
+            System.out.println(">>>>>>>>>>>>>>" + recommendationExtracted + "<<<<<<<<<<<<<<<<<<");
+
+            return recommendationSplit[1];
+
         }
+        return "empty";
     }
 }
