@@ -40,14 +40,14 @@ public class AdviceServiceImpl implements AdviceService {
         }
     }
     @Transactional
-    public Advice updateRecommendation(Long id, String recommendation) {
-        Optional<Advice> adviceOptional = adviceRepository.findById(id);
+    public Advice updateRecommendation(Long providedAdviceId, String providedRecommendation) {
+        Optional<Advice> adviceOptional = adviceRepository.findById(providedAdviceId);
         if (adviceOptional.isPresent()) {
             Advice advice = adviceOptional.get();
-            advice.setRecommendation(recommendation);
+            advice.setRecommendation(providedRecommendation);
             return adviceRepository.save(advice);
         } else {
-            throw new AdviceNotFoundException("Advice not found for adviceId: " + id);
+            throw new AdviceNotFoundException("Advice not found for adviceId: " + providedAdviceId);
         }
     }
 
