@@ -1,7 +1,7 @@
 package com.aihairadvise.mapper;
 
 import com.aihairadvise.dto.request.AdviceRequestDto;
-import com.aihairadvise.dto.request.AdviceResponseDto;
+import com.aihairadvise.dto.response.AdviceResponseDto;
 import com.aihairadvise.model.Advice;
 import org.springframework.stereotype.Component;
 
