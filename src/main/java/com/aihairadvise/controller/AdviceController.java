@@ -4,6 +4,7 @@ import com.aihairadvise.configuration.exception.AdviceNotFoundException;
 import com.aihairadvise.dto.request.AdviceRequestDto;
 import com.aihairadvise.dto.response.AdviceResponseDto;
 import com.aihairadvise.dto.request.UpdateRecommendationRequestDto;
+import com.aihairadvise.model.Advice;
 import com.aihairadvise.service.AdviceService;
 import com.aihairadvise.validator.AdviceRequestValidator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,10 +40,10 @@ public class AdviceController {
     }
 
     @PutMapping("/update-recommendation")
-    public ResponseEntity<String> updateRecommendation(@RequestBody UpdateRecommendationRequestDto updateRecommendationRequestDto) {
+    public ResponseEntity<Advice> updateRecommendation(@RequestBody UpdateRecommendationRequestDto updateDTO) {
         try {
-            adviceService.updateRecommendation(updateRecommendationRequestDto.getId(), updateRecommendationRequestDto.getRecommendation());
-            return ResponseEntity.ok("Recommendation updated successfully");
+            Advice updatedAdvice = adviceService.updateRecommendation(updateDTO.getId(), updateDTO.getRecommendation());
+            return ResponseEntity.ok(updatedAdvice);
         } catch (AdviceNotFoundException ex) {
             return ResponseEntity.notFound().build();
         }
