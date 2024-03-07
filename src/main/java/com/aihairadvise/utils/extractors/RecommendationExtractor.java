@@ -38,12 +38,6 @@ public class RecommendationExtractor {
         return descriptions;
     }
 
-    public static void printArray(String[] arr) {
-        for (String s : arr) {
-            System.out.println("Give your most" + s);
-            System.out.println("=============");
-        }
-    }
 
     public static String extractTextAfterChatGPT(String recommendation) {
         String[] recommendationSplit = recommendation.split("ChatGPT");
