@@ -62,4 +62,9 @@ Feel free to reach out if you have any questions or feedback. Happy hairstyling!
 
 ## Todo:
 
-- Frontend
+Features still needed to be done:
+
+1. **Swagger Documentation**: Add swagger endpoints.
+
+2. **Database**: Create and host database somewhere.
+
