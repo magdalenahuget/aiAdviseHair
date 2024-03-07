@@ -62,4 +62,22 @@ Feel free to reach out if you have any questions or feedback. Happy hairstyling!
 
 ## Todo:
 
-- Frontend
+Features still needed to be done:
+
+1. **Swagger Documentation**: Add swagger endpoints.
+
+2. **Database**: Create and host database somewhere.
+
+3. **Database**: Fill database with advices.
+
+4. **Backend**: Deploy backend to Azure Cloud.
+   
+5. **Frontend**: Create simple frontend.
+
+6. **Ai**: Generate hairstyle image based on recommendation.
+
+7. **Backend**: Add image to Advice Model.
+
+8. **Database**: Add images to database.
+
+9. **Tests**: Add tests.
