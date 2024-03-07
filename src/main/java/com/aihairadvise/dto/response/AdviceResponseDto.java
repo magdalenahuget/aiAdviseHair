@@ -1,4 +1,4 @@
-package com.aihairadvise.dto.request;
+package com.aihairadvise.dto.response;
 
 import lombok.*;
 

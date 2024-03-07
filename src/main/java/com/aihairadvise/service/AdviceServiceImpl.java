@@ -2,12 +2,13 @@ package com.aihairadvise.service;
 
 import com.aihairadvise.configuration.exception.AdviceNotFoundException;
 import com.aihairadvise.dto.request.AdviceRequestDto;
-import com.aihairadvise.dto.request.AdviceResponseDto;
+import com.aihairadvise.dto.response.AdviceResponseDto;
 import com.aihairadvise.mapper.AdviceMapper;
 import com.aihairadvise.model.Advice;
 import com.aihairadvise.repository.AdviceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
@@ -38,6 +39,16 @@ public class AdviceServiceImpl implements AdviceService {
             throw new AdviceNotFoundException("Advice not found for given attributes");
         }
     }
-
+    @Transactional
+    public Advice updateRecommendation(Long id, String recommendation) {
+        Optional<Advice> adviceOptional = adviceRepository.findById(id);
+        if (adviceOptional.isPresent()) {
+            Advice advice = adviceOptional.get();
+            advice.setRecommendation(recommendation);
+            return adviceRepository.save(advice);
+        } else {
+            throw new AdviceNotFoundException("Advice not found for id: " + id);
+        }
+    }
 
 }
