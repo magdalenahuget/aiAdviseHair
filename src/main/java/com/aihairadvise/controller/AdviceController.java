@@ -8,6 +8,7 @@ import com.aihairadvise.model.Advice;
 import com.aihairadvise.service.AdviceService;
 import com.aihairadvise.validator.AdviceRequestValidator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -24,7 +25,7 @@ public class AdviceController {
         this.adviceRequestValidator = adviceRequestValidator;
     }
 
-    @PostMapping("/search")
+    @PostMapping("/")
     public ResponseEntity<?> getAdviceByAttributes(@RequestBody AdviceRequestDto requestDTO, BindingResult result) {
         adviceRequestValidator.validate(requestDTO, result);
         if (result.hasErrors()) {
@@ -39,13 +40,13 @@ public class AdviceController {
         }
     }
 
-    @PutMapping("/update-recommendation")
-    public ResponseEntity<Advice> updateRecommendation(@RequestBody UpdateRecommendationRequestDto updateDTO) {
+    @PutMapping("/")
+    public ResponseEntity<?> updateRecommendation(@RequestBody UpdateRecommendationRequestDto updateDTO) {
         try {
             Advice updatedAdvice = adviceService.updateRecommendation(updateDTO.getId(), updateDTO.getRecommendation());
             return ResponseEntity.ok(updatedAdvice);
         } catch (AdviceNotFoundException ex) {
-            return ResponseEntity.notFound().build();
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
         }
     }
 
