@@ -8,13 +8,10 @@ public class RecommendationExtractor {
     public static void main(String[] args) {
         try {
             String[] descriptions = extractAndSplitDescriptions("src/main/resources/aiAnswersSecondPart.txt");
-            System.out.println(">>>>>>>>>>>>>>");
-            System.out.println(">>>>>>>>>>>>>>");
 
             for (String description : descriptions) {
                 String textAfterChatGPT = extractTextAfterChatGPT(description);
             }
-            System.out.println(">>>>>>>>>>>>>>");
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -43,7 +40,12 @@ public class RecommendationExtractor {
         String[] recommendationSplit = recommendation.split("ChatGPT");
         if (recommendationSplit.length > 1) {
             // REMEMBER! First number is not printed. It starts with 180, but it isn't displayed.
-            System.out.println(recommendationSplit[1]);
+
+            String recommendationExtracted = recommendationSplit[1];
+            recommendationExtracted = recommendationExtracted.substring(0, recommendationExtracted.length() - 5).trim();
+
+            System.out.println(">>>>>>>>>>>>>>" + recommendationExtracted + "<<<<<<<<<<<<<<<<<<");
+
             return recommendationSplit[1];
 
         }
