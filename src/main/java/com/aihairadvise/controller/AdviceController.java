@@ -2,16 +2,16 @@ package com.aihairadvise.controller;
 
 import com.aihairadvise.configuration.exception.AdviceNotFoundException;
 import com.aihairadvise.dto.request.AdviceRequestDto;
-import com.aihairadvise.dto.request.AdviceResponseDto;
+import com.aihairadvise.dto.response.AdviceResponseDto;
+import com.aihairadvise.dto.request.UpdateRecommendationRequestDto;
+import com.aihairadvise.model.Advice;
 import com.aihairadvise.service.AdviceService;
 import com.aihairadvise.validator.AdviceRequestValidator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/advices")
@@ -25,7 +25,7 @@ public class AdviceController {
         this.adviceRequestValidator = adviceRequestValidator;
     }
 
-    @PostMapping("/search")
+    @PostMapping("/")
     public ResponseEntity<?> getAdviceByAttributes(@RequestBody AdviceRequestDto requestDTO, BindingResult result) {
         adviceRequestValidator.validate(requestDTO, result);
         if (result.hasErrors()) {
@@ -37,6 +37,16 @@ public class AdviceController {
             return ResponseEntity.ok(advice);
         } catch (AdviceNotFoundException ex) {
             return ResponseEntity.notFound().build();
+        }
+    }
+
+    @PutMapping("/")
+    public ResponseEntity<?> updateRecommendation(@RequestBody UpdateRecommendationRequestDto updateDTO) {
+        try {
+            Advice updatedAdvice = adviceService.updateRecommendation(updateDTO.getAdviceId(), updateDTO.getRecommendation());
+            return ResponseEntity.ok(updatedAdvice);
+        } catch (AdviceNotFoundException ex) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
         }
     }
 
