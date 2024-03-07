@@ -47,7 +47,7 @@ public class AdviceServiceImpl implements AdviceService {
             advice.setRecommendation(recommendation);
             return adviceRepository.save(advice);
         } else {
-            throw new AdviceNotFoundException("Advice not found for id: " + id);
+            throw new AdviceNotFoundException("Advice not found for adviceId: " + id);
         }
     }
 

@@ -43,7 +43,7 @@ public class AdviceController {
     @PutMapping("/")
     public ResponseEntity<?> updateRecommendation(@RequestBody UpdateRecommendationRequestDto updateDTO) {
         try {
-            Advice updatedAdvice = adviceService.updateRecommendation(updateDTO.getId(), updateDTO.getRecommendation());
+            Advice updatedAdvice = adviceService.updateRecommendation(updateDTO.getAdviceId(), updateDTO.getRecommendation());
             return ResponseEntity.ok(updatedAdvice);
         } catch (AdviceNotFoundException ex) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());

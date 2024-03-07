@@ -9,6 +9,6 @@ import lombok.*;
 @Getter
 @Setter
 public class UpdateRecommendationRequestDto {
-    private Long id;
+    private Long adviceId;
     private String recommendation;
 }
