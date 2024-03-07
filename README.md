@@ -68,3 +68,7 @@ Features still needed to be done:
 
 2. **Database**: Create and host database somewhere.
 
+3. **Database**: Fill database with advices.
+
+4. **Backend**: Deploy backend to Azure Cloud.
+   
