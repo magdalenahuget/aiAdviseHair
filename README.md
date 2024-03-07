@@ -74,8 +74,10 @@ Features still needed to be done:
    
 5. **Frontend**: Create simple frontend.
 
-4. **Ai**: Generate hairstyle image based on recommendation.
+6. **Ai**: Generate hairstyle image based on recommendation.
 
-4. **Backend**: Add image to Advice Model.
+7. **Backend**: Add image to Advice Model.
 
-4. **Database**: Add images to database.
+8. **Database**: Add images to database.
+
+9. **Tests**: Add tests.
