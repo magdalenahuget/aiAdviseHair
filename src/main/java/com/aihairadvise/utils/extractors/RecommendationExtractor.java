@@ -42,6 +42,7 @@ public class RecommendationExtractor {
             // REMEMBER! First number is not printed. It starts with 180, but it isn't displayed.
 
             String recommendationExtracted = recommendationSplit[1];
+            // TODO: remember to check/fix last and first one
             recommendationExtracted = recommendationExtracted.substring(0, recommendationExtracted.length() - 5).trim();
 
             System.out.println(">>>>>>>>>>>>>>" + recommendationExtracted + "<<<<<<<<<<<<<<<<<<");
