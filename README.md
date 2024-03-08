@@ -1,5 +1,24 @@
 ## Warning! Work in progress! :)
 
+## Todo:
+
+Features still needed to be done:
+
+1. **Swagger Documentation**: Add swagger endpoints.
+
+2. **Database**: Create and host database somewhere.
+
+3. **Database**: Fill database with advices.
+
+4. **Backend**: Deploy backend to Azure Cloud.
+   
+5. **Frontend**: Create simple frontend.
+
+6. **Ai**: Generate hairstyle image based on recommendation.
+
+7. **Backend**: Add image to Advice Model.
+
+
 # AI Hair Advise API
 
 Welcome to the AI Hair Advise API! This RESTful API provides a convenient way to generate recommended hairstyles based on human characteristics. Whether you're an individual looking for a fresh style or a hairdresser seeking suggestions for your clients, this application has you covered.
@@ -60,23 +79,6 @@ This is the backend and API version for now. Future versions may include a front
 Feel free to reach out if you have any questions or feedback. Happy hairstyling!
 
 
-## Todo:
-
-Features still needed to be done:
-
-1. **Swagger Documentation**: Add swagger endpoints.
-
-2. **Database**: Create and host database somewhere.
-
-3. **Database**: Fill database with advices.
-
-4. **Backend**: Deploy backend to Azure Cloud.
-   
-5. **Frontend**: Create simple frontend.
-
-6. **Ai**: Generate hairstyle image based on recommendation.
-
-7. **Backend**: Add image to Advice Model.
 
 8. **Database**: Add images to database.
 
