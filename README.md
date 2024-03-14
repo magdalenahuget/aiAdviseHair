@@ -12,11 +12,15 @@ Features still needed to be done:
 
 4. **Backend**: Deploy backend to Azure Cloud.
    
-5. **Frontend**: Create simple frontend.
+5. **Tests**: Add tests.
 
 6. **Ai**: Generate hairstyle image based on recommendation.
 
 7. **Backend**: Add image to Advice Model.
+
+8. **Database**: Add images to database.
+
+9. **Frontend**: Create simple frontend.
 
 
 # AI Hair Advise API
@@ -80,6 +84,3 @@ Feel free to reach out if you have any questions or feedback. Happy hairstyling!
 
 
 
-8. **Database**: Add images to database.
-
-9. **Tests**: Add tests.
