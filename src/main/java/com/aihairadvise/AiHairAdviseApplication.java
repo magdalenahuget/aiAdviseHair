@@ -13,7 +13,7 @@ public class AiHairAdviseApplication {
 		SpringApplication.run(AiHairAdviseApplication.class, args);
 	}
 
-	// Needed to generate base data
+	// Needed to generate base data - all advices are generated and saved in database
 //	public static void main(String[] args) {
 //		ConfigurableApplicationContext context = SpringApplication.run(AiHairAdviseApplication.class, args);
 //
