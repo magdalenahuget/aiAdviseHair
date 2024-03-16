@@ -81,3 +81,5 @@ Features still needed to be done:
 8. **Database**: Add images to database.
 
 9. **Tests**: Add tests.
+
+10. **Exception**: Add global exception handling.
