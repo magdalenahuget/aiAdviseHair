@@ -15,4 +15,6 @@ public interface AdviceRepository extends JpaRepository<Advice, Long> {
                                       Advice.LipFullness lipFullness,
                                       Advice.EyeColor eyeColor,
                                       Advice.Gender gender);
+
+    Advice findAdviceById(Long id);
 }
