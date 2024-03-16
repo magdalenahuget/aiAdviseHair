@@ -22,6 +22,8 @@ Features still needed to be done:
 
 9. **Frontend**: Create simple frontend.
 
+10. **CI/CD**: Create Github Action pipeline.
+
 
 # AI Hair Advise API
 
