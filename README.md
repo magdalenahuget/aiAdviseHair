@@ -6,23 +6,25 @@ Features still needed to be done:
 
 1. **Swagger Documentation**: Add swagger endpoints.
 
-2. **Database**: Create and host database somewhere.
+~~2. **Database**: Create and host database somewhere.~~
 
-3. **Database**: Fill database with advices.
+~~3. **Database**: Fill database with advices.~~
 
-4. **Backend**: Deploy backend to Azure Cloud.
+~~4. **Database**: Fill database with recommendations.~~
+
+5. **Backend**: Deploy backend to Azure Cloud.
    
-5. **Tests**: Add tests.
+6. **Tests**: Add tests.
 
-6. **Ai**: Generate hairstyle image based on recommendation.
+7. **Ai**: Generate hairstyle image based on recommendation.
 
-7. **Backend**: Add image to Advice Model.
+8. **Backend**: Add image to Advice Model.
 
-8. **Database**: Add images to database.
+9. **Database**: Add images to database.
 
-9. **Frontend**: Create simple frontend.
+10. **Frontend**: Create simple frontend.
 
-10. **CI/CD**: Create GitHub Action pipeline.
+11. **CI/CD**: Create GitHub Action pipeline.
 
 
 # AI Hair Advise API
