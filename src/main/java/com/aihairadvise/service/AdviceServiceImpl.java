@@ -25,7 +25,7 @@ public class AdviceServiceImpl implements AdviceService {
     }
 
     public AdviceResponseDto getAdviceByAttributes(AdviceRequestDto requestDTO) {
-        Optional<Advice> adviceOptional = adviceRepository.findByAttributes(
+        Optional<Advice> adviceOptional = adviceRepository.findByFaceShapeAndForeheadHeightAndNoseSizeAndLipFullnessAndEyeColorAndGender(
                 requestDTO.getFaceShape(),
                 requestDTO.getForeheadHeight(),
                 requestDTO.getNoseSize(),

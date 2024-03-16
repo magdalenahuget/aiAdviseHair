@@ -9,7 +9,7 @@ import java.util.Optional;
 @Repository
 public interface AdviceRepository extends JpaRepository<Advice, Long> {
 
-    Optional<Advice> findByAttributes(Advice.FaceShape faceShape,
+    Optional<Advice> findByFaceShapeAndForeheadHeightAndNoseSizeAndLipFullnessAndEyeColorAndGender(Advice.FaceShape faceShape,
                                       Advice.ForeheadHeight foreheadHeight,
                                       Advice.NoseSize noseSize,
                                       Advice.LipFullness lipFullness,
