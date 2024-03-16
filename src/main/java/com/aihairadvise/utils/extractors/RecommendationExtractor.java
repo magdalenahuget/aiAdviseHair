@@ -7,7 +7,8 @@ public class RecommendationExtractor {
 
     public static void main(String[] args) {
         try {
-            String[] descriptions = extractAndSplitDescriptions("src/main/resources/aiAnswersSecondPart.txt");
+//            String[] descriptions = extractAndSplitDescriptions("src/main/resources/aiAnswersSecondPart.txt");
+            String[] descriptions = extractAndSplitDescriptions("src/main/resources/ai1.txt");
 
             for (String description : descriptions) {
                 String textAfterChatGPT = extractTextAfterChatGPT(description);
