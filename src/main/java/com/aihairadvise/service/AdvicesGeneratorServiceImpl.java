@@ -1,12 +1,21 @@
 package com.aihairadvise.service;
 
 import com.aihairadvise.model.Advice;
+import com.aihairadvise.repository.AdviceRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class AdvicesGeneratorServiceImpl implements AdvicesGeneratorService {
 
-    public void generateAndDisplayAdvices() {
+    private final AdviceRepository adviceRepository;
+
+    @Autowired
+    public AdvicesGeneratorServiceImpl(AdviceRepository adviceRepository) {
+        this.adviceRepository = adviceRepository;
+    }
+
+    public void generateAndSaveAdvices() {
         Advice.FaceShape[] faceShapes = Advice.FaceShape.values();
         Advice.ForeheadHeight[] foreheadHeights = Advice.ForeheadHeight.values();
         Advice.NoseSize[] noseSizes = Advice.NoseSize.values();
@@ -24,7 +33,9 @@ public class AdvicesGeneratorServiceImpl implements AdvicesGeneratorService {
                                 counter++;
                                 Advice advice = createAdviceBy(faceShape, foreheadHeight, noseSize, lipFullness, eyeColor, gender);
 
-                                displayHairSpecificPrompt(counter, advice);
+//                                displayHairSpecificPrompt(counter, advice);
+
+                                adviceRepository.save(advice);
                             }
                         }
                     }
