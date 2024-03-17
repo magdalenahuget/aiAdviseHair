@@ -1,7 +1,12 @@
+# AI Hair Advise API
+
+Welcome to the AI Hair Advise API! This RESTful API provides a convenient way to generate recommended hairstyles based on human characteristics. Whether you're an individual looking for a fresh style or a hairdresser seeking suggestions for your clients, this application has you covered.
+
+Please use the application carefully and patiently. The resources are hosted on free or almost free tiers, which may result in slower network performance. Be mindful of the allocated resources to ensure optimal usage within the constraints of the chosen pricing plans. Excessive usage may result in the unavailability of the service.
+![](readmeSources/azure-aiadvise-overview.PNG.PNG)
+
 ## The application is currently available only through Swagger deployed on Azure.
 [Ai advise hair](https://aihairadvise.happyflower-f25c91cc.eastus2.azurecontainerapps.io/aiAdviseHair/swagger-ui/index.html)
-
-## Warning! Work in progress! :)
 
 ## Todo:
 
@@ -21,7 +26,7 @@ Features still needed to be done:
 
 7. **Database**: Add timestamp to Advice entity.
    
-8. **Tests**: Add tests.
+8. **Tests**: Add integration tests.
 
 9. **Ai**: Generate hairstyle image based on recommendation.
 
@@ -31,15 +36,7 @@ Features still needed to be done:
 
 12. **Frontend**: Create simple frontend.
 
-13. **CI/CD**: Create GitHub Action pipeline.
-
-
-# AI Hair Advise API
-
-Welcome to the AI Hair Advise API! This RESTful API provides a convenient way to generate recommended hairstyles based on human characteristics. Whether you're an individual looking for a fresh style or a hairdresser seeking suggestions for your clients, this application has you covered.
-
-Please use the application carefully and patiently. The resources are hosted on free or almost free tiers, which may result in slower network performance. Be mindful of the allocated resources to ensure optimal usage within the constraints of the chosen pricing plans. Excessive usage may result in the unavailability of the service.
-![](readmeSources/azure-aiadvise-overview.PNG.PNG)
+13. **CI/CD**: Create GitHub Action pipeline (azure deployment, tests, versioning).
 
 ## Technologies Used
 
