@@ -56,14 +56,12 @@ To use the API, follow these steps:
 
 1. **Swagger Documentation**: Explore the API using the Swagger documentation available at [API Documentation](https://aihairadvise.happyflower-f25c91cc.eastus2.azurecontainerapps.io/aiAdviseHair/swagger-ui/index.html).
 
-2. **Make Requests**: Use Swagger UI or any API testing tool to make requests to the API, providing human characteristics as input. Below example request:
-![](readmeSources/swagger-request-example.PNG) 
+2. **Make Requests**: Use Swagger UI or any API testing tool to make requests to the API, providing human characteristics as input. 
 
 3. **Get Recommendations**: Receive personalized hairstyle recommendations based on the input characteristics, generated with the help of AI ChatGPT 3.5 Turbo.
-![](readmeSources/swagger-response-example.PNG)
 
 ## Example request
-
+![](readmeSources/swagger-request-example.PNG)
 ```json
 {
   "faceShape": "SQUARE",
@@ -76,7 +74,7 @@ To use the API, follow these steps:
 ```
 
 ## Example response
-
+![](readmeSources/swagger-response-example.PNG)
 ```json
 {
   "recommendation": "For a female with a square face shape, high forehead, large nose size, full lips, and blue eyes, a flattering hairstyle would be a layered shoulder-length cut with side-swept bangs. This style helps soften the angles of a square face, while side-swept bangs reduce the prominence of a high forehead and draw attention to the eyes. Layers add movement and texture to the hair, enhancing its natural volume. Soft waves or curls can further soften the overall look and complement facial features. Keeping the hair length around the shoulders maintains femininity while offering versatility in styling. It's crucial to avoid hairstyles that accentuate the squareness of the face, opting instead for styles that create balance and harmony. Overall, this recommended hairstyle aims to enhance the individual's natural beauty while achieving a stylish and flattering look suitable for various occasions.",
