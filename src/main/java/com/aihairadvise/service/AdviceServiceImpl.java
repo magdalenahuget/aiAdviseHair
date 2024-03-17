@@ -3,6 +3,7 @@ package com.aihairadvise.service;
 import com.aihairadvise.configuration.exception.AdviceNotFoundException;
 import com.aihairadvise.dto.request.AdviceRequestDto;
 import com.aihairadvise.dto.response.AdviceResponseDto;
+import com.aihairadvise.dto.response.GetAdviceResponseDto;
 import com.aihairadvise.mapper.AdviceMapper;
 import com.aihairadvise.model.Advice;
 import com.aihairadvise.repository.AdviceRepository;
@@ -48,6 +49,18 @@ public class AdviceServiceImpl implements AdviceService {
             return adviceRepository.save(advice);
         } else {
             throw new AdviceNotFoundException("Advice not found for adviceId: " + providedAdviceId);
+        }
+    }
+
+    @Override
+    public GetAdviceResponseDto getAdviceById(Long adviceId) {
+        Optional<Advice> adviceOptional = adviceRepository.findById(adviceId);
+        if (adviceOptional.isPresent()) {
+            Advice advice = adviceOptional.get();
+
+            return adviceMapper.toGetAllResponseDto(advice);
+        } else {
+            throw new AdviceNotFoundException("Advice not found for adviceId: " + adviceId);
         }
     }
 
