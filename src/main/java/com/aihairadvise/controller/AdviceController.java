@@ -4,6 +4,7 @@ import com.aihairadvise.configuration.exception.AdviceNotFoundException;
 import com.aihairadvise.dto.request.AdviceRequestDto;
 import com.aihairadvise.dto.response.AdviceResponseDto;
 import com.aihairadvise.dto.request.UpdateRecommendationRequestDto;
+import com.aihairadvise.dto.response.GetAdviceResponseDto;
 import com.aihairadvise.model.Advice;
 import com.aihairadvise.service.AdviceService;
 import com.aihairadvise.validator.AdviceRequestValidator;
@@ -23,6 +24,16 @@ public class AdviceController {
     public AdviceController(AdviceService adviceService, AdviceRequestValidator adviceRequestValidator) {
         this.adviceService = adviceService;
         this.adviceRequestValidator = adviceRequestValidator;
+    }
+
+    @GetMapping("/advices/{id}")
+    public ResponseEntity<?> getAdviceById(@PathVariable("id") Long adviceId) {
+        try {
+            GetAdviceResponseDto advice = adviceService.getAdviceById(adviceId);
+            return ResponseEntity.ok(advice);
+        } catch (AdviceNotFoundException ex) {
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @PostMapping("/")
