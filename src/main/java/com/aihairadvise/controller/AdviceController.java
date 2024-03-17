@@ -26,8 +26,8 @@ public class AdviceController {
         this.adviceRequestValidator = adviceRequestValidator;
     }
 
-    @GetMapping("/advices/{id}")
-    public ResponseEntity<?> getAdviceById(@PathVariable("id") Long adviceId) {
+    @GetMapping("/{id}")
+    public ResponseEntity<?> getAdviceById(@PathVariable(value="id") Long adviceId) {
         try {
             GetAdviceResponseDto advice = adviceService.getAdviceById(adviceId);
             return ResponseEntity.ok(advice);
