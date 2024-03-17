@@ -1,4 +1,4 @@
-package com.aihairadvise.configuration;
+package com.aihairadvise.configuration.exception;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;

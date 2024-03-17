@@ -1,12 +1,7 @@
-package com.aihairadvise.configuration;
-import com.aihairadvise.configuration.ErrorDetails;
-import com.aihairadvise.configuration.exception.AdviceNotFoundException;
-import jakarta.servlet.http.HttpServletRequest;
+package com.aihairadvise.configuration.exception;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
 
