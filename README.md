@@ -4,7 +4,7 @@
 
 Features still needed to be done:
 
-1. **Swagger Documentation**: Add swagger endpoints.
+~~1. **Swagger Documentation**: Add swagger endpoints.~~
 
 ~~2. **Database**: Create and host database somewhere.~~
 
@@ -12,7 +12,7 @@ Features still needed to be done:
 
 ~~4. **Database**: Fill database with recommendations.~~
 
-5. **Backend**: Deploy backend to Azure Cloud.
+~~5. **Backend**: Deploy backend to Azure Cloud.~~
 
 6. **Backend**: Add timestamp to Advice model.
 
