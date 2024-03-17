@@ -1,3 +1,6 @@
+## The application is currently available only through Swagger deployed on Azure.
+[Ai advise hair](https://aihairadvise.happyflower-f25c91cc.eastus2.azurecontainerapps.io/aiAdviseHair/swagger-ui/index.html)
+
 ## Warning! Work in progress! :)
 
 ## Todo:
@@ -35,6 +38,9 @@ Features still needed to be done:
 
 Welcome to the AI Hair Advise API! This RESTful API provides a convenient way to generate recommended hairstyles based on human characteristics. Whether you're an individual looking for a fresh style or a hairdresser seeking suggestions for your clients, this application has you covered.
 
+Please use the application carefully and patiently. The resources are hosted on free or almost free tiers, which may result in slower network performance. Be mindful of the allocated resources to ensure optimal usage within the constraints of the chosen pricing plans. Excessive usage may result in the unavailability of the service.
+![](readmeSources/azure-aiadvise-overview.PNG.PNG)
+
 ## Technologies Used
 
 - **Java 17**: The core programming language used to build the application.
@@ -51,30 +57,37 @@ The API takes human characteristics as input and leverages the power of AI throu
 
 To use the API, follow these steps:
 
-1. **Swagger Documentation**: Explore the API using the Swagger documentation available at [API Documentation](#swagger-url).
+1. **Swagger Documentation**: Explore the API using the Swagger documentation available at [API Documentation](https://aihairadvise.happyflower-f25c91cc.eastus2.azurecontainerapps.io/aiAdviseHair/swagger-ui/index.html).
 
-2. **Make Requests**: Use Swagger UI or any API testing tool to make requests to the API, providing human characteristics as input.
+2. **Make Requests**: Use Swagger UI or any API testing tool to make requests to the API, providing human characteristics as input. Below example request:
+![](readmeSources/swagger-request-example.PNG) 
 
 3. **Get Recommendations**: Receive personalized hairstyle recommendations based on the input characteristics, generated with the help of AI ChatGPT 3.5 Turbo.
+![](readmeSources/swagger-response-example.PNG)
 
 ## Example request
 
 ```json
 {
-  "hairColor": "brown",
-  "faceShape": "oval",
-  "sex": "female"
+  "faceShape": "SQUARE",
+  "foreheadHeight": "HIGH",
+  "noseSize": "LARGE",
+  "lipFullness": "FULL",
+  "eyeColor": "BLUE",
+  "gender": "FEMALE"
 }
 ```
-
 
 ## Example response
 
 ```json
 {
-  "recommendation": "Consider a layered bob with highlights. It will complement your features and style preferences."
+  "recommendation": "For a female with a square face shape, high forehead, large nose size, full lips, and blue eyes, a flattering hairstyle would be a layered shoulder-length cut with side-swept bangs. This style helps soften the angles of a square face, while side-swept bangs reduce the prominence of a high forehead and draw attention to the eyes. Layers add movement and texture to the hair, enhancing its natural volume. Soft waves or curls can further soften the overall look and complement facial features. Keeping the hair length around the shoulders maintains femininity while offering versatility in styling. It's crucial to avoid hairstyles that accentuate the squareness of the face, opting instead for styles that create balance and harmony. Overall, this recommended hairstyle aims to enhance the individual's natural beauty while achieving a stylish and flattering look suitable for various occasions.",
+  "timestamp": null
 }
 ```
+
+NOTE: timestamp not added yet. So, null value for 'timestamp' field is expected.
 
 ## Swagger Documentation
 
