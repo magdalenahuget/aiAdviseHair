@@ -13,18 +13,22 @@ Features still needed to be done:
 ~~4. **Database**: Fill database with recommendations.~~
 
 5. **Backend**: Deploy backend to Azure Cloud.
+
+6. **Backend**: Add timestamp to Advice model.
+
+7. **Database**: Add timestamp to Advice entity.
    
-6. **Tests**: Add tests.
+8. **Tests**: Add tests.
 
-7. **Ai**: Generate hairstyle image based on recommendation.
+9. **Ai**: Generate hairstyle image based on recommendation.
 
-8. **Backend**: Add image to Advice Model.
+10. **Backend**: Add image to Advice Model.
 
-9. **Database**: Add images to database.
+11. **Database**: Add images to database.
 
-10. **Frontend**: Create simple frontend.
+12. **Frontend**: Create simple frontend.
 
-11. **CI/CD**: Create GitHub Action pipeline.
+13. **CI/CD**: Create GitHub Action pipeline.
 
 
 # AI Hair Advise API
